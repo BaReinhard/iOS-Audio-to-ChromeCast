@@ -29,6 +29,7 @@ sudo cp etc/rc.local /etc/rc.local
 sudo chmod +x /etc/rc.local
 sudo cp usr/local/bin/shairport-start
 sudo chmod +x /usr/local/bin/shairport-start
+sudo cp etc/asound.con /etc/asound.conf
 
 # Currently working on a script that will automatically move the new input sink from shairport-sync to the desired output stream to the chromecast.
 # It can be done manually via:
@@ -36,5 +37,6 @@ pactl list sinks   # You will get a list of sinks you want to sink to
 pactl list sink-inputs   # You will get an input sink only after starting to stream audio and connecting to AirPlay
 pactl move-input-sink {input sink #} {output sink #}
 ```
+
 
 Thats it! Enjoy.
