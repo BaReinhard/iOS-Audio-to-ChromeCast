@@ -1,3 +1,6 @@
+
+# This is only a reference and will not be the file used as the /etc/rc.local file
+
 #!/bin/sh -e
 #
 # rc.local
@@ -11,5 +14,5 @@
 #
 # By default this script does nothing.
 pulseaudio-dlna&
-su brett - -c /usr/local/bin/shairport-start&        #In place of brett choose your username
+su ${UserName} - -c /usr/local/bin/shairport-start&        
 exit 0
