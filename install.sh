@@ -27,5 +27,7 @@ echo " ====================== Installing Shairport-Sync ====================="
 echo "${UserName}" | excmd shairport-sync_install.sh | tee -a $log
 echo " ======================================================================"
 
+exit 0
+
 
 
