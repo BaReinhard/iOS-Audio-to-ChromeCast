@@ -25,6 +25,12 @@ excmd cp usr/local/bin/shairport-start /usr/local/bin/shairport-start
 # Makes the new script executable
 excmd chmod +x /usr/local/bin/shairport-start
 
+# Copies the new autostream handler to the proper bin directory
+excmd cp usr/local/bin/autostream /usr/local/bin/autostream
+
+# Made the autostream handler executable
+excmd chmod +x /usr/local/bin/autostream
+
 # Inserts a line to /etc/rc.local to allow shairport-sync to execute as a non root user
 excmd sed -i -e "\$i \su ${UserName} - -c /usr/local/bin/shairport-start&\n" /etc/rc.local
 
