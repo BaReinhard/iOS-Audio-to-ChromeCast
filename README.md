@@ -16,20 +16,10 @@ This project will setup a Raspberry Pi running Ubuntu MATE as a "middle-man" bet
 First setup your chromecasts and create a multi device group via the app Google Home, then move on to the software
 
 ```
-sudo apt-add-repository ppa:qos/pulseaudio-dlna
-sudo apt-add-repository ppa:dantheperson/shairplay-sync
-sudo apt-get update
-sudo apt-get install pulseaudio-dlna
-sudo apt-get install shairport-sync
-sudo systemctl disable pulseaudio-dlna
-sudo systemctl disable shairport-sync
 git clone https://github.com/bareinhard/Multiroom-Audio-iOS
 cd Multiroom-Audio-iOS
-sudo cp etc/rc.local /etc/rc.local
-sudo chmod +x /etc/rc.local
-sudo cp usr/local/bin/shairport-start
-sudo chmod +x /usr/local/bin/shairport-start
-sudo cp etc/asound.con /etc/asound.conf
+sudo chmod +x ./install.sh
+sudo ./install.sh
 
 # Currently working on a script that will automatically move the new input sink from shairport-sync to the desired output stream to the chromecast.
 # It can be done manually via:
