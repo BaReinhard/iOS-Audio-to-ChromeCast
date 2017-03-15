@@ -35,7 +35,7 @@ excmd chmod +x /usr/local/bin/autostream
 excmd cp usr/local/bin/setdefaultsink /usr/local/bin/setdefaultsink
 
 # Made  setdefaultsink executable
-excmd cp usr/local/bin/setdefaultsink /usr/local/bin/setdefaultsink
+excmd chmod +x /usr/local/bin/setdefaultsink
 
 # Inserts a line to /etc/rc.local to allow shairport-sync to execute as a non root user
 excmd sed -i -e "\$i \su ${UserName} - -c /usr/local/bin/shairport-start&\n" /etc/rc.local
