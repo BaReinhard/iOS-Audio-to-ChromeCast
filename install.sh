@@ -28,6 +28,13 @@ echo " ====================== Installing Shairport-Sync ====================="
 echo "${UserName}" | excmd shairport-sync_install.sh | tee -a $log
 echo " ======================================================================"
 
+# Prompts for Reboot
+REBOOT="REBOOT"
+while [ $REBOOT != "y" ] && [ $REBOOT != "n" ];
+do
+  echo "It is suggested that you reboot your system at this time"
+  read -p "Would you line to reboot now? (y/n) :" REBOOT
+done
 exit 0
 
 
