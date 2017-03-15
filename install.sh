@@ -1,10 +1,11 @@
 #!/bin/bash
 log="./install.log"
-echo "" > $log
-
+echo "" | tee -a $log
+chmod +x ./*
+UserNameAnswer="UserNameAnswer"
 while [ $UserNameAnswer != "y" ];
 do
-  read -p "What is your username? :" UserName
+  read -p "What is your username? : " UserName
   echo "User name is : ${UserName}"
   read -p "Is this correct? (y/n) : " UserNameAnswer
 done
