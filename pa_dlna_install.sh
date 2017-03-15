@@ -17,6 +17,6 @@ apt-get install pulseaudio-dlna
 excmd systemctl disable pulseaudio-dlna
 
 # Adds pulseaudio-dlna to the /etc/rc.local file just before the last line (exit 0)
-excmd sed -i -e '$i \pulseaudio-dlna&\n' /etc/rc.local
+sed -i '$i \pulseaudio-dlna&\n' /etc/rc.local
 
 exit 0
