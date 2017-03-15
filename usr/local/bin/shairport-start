@@ -1,5 +1,6 @@
 #!/bin/bash
 
+# Starts shairport-sync and outputs to Alsas, pulse plugin allowing for Pulseaudio to see it as a sink input
 shairport-sync -o alsa -c pulse&
 
 exit 0
