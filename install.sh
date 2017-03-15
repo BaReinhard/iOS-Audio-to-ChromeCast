@@ -9,6 +9,13 @@ do
   echo "User name is : ${UserName}"
   read -p "Is this correct? (y/n) : " UserNameAnswer
 done
+AirPlayNameAnswer="AirPlayNameAnswer"
+while [ $AirPlayNameAnswer != "y" ];
+do
+  read -p "What you would like to name your AirPlay Speaker? : " AirPlayName
+  echo "AirPlay Speaker name is : ${AirPlayName}"
+  read -p "Is this correct? (y/n) : " AirPlayNameAnswer
+done
 #============================== Error Handler ==========================
 function excmd {
   echo "==================> Executing: $*"
@@ -25,7 +32,7 @@ echo " ====================== Installing Pulseaudio-dlna ===================="
 excmd pa_dlna_install.sh | tee -a $log
 echo " ======================================================================"
 echo " ====================== Installing Shairport-Sync ====================="
-echo "${UserName}" | excmd shairport-sync_install.sh | tee -a $log
+{ echo "${UserName}"; echo "${AirPlayName}";} | excmd shairport-sync_install.sh | tee -a $log
 echo " ======================================================================"
 
 # Prompts for Reboot
