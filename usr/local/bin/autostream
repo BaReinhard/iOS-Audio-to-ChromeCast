@@ -1,8 +1,12 @@
 #!/bin/bash
+
 # Edit this line to whatever Sink Index You prefer
 # Default Sink Output
 SINKOUTPUT=3
-SINKINPUT=${pactl list sink-inputs | grep "Sink Input" | sed 's/.*#//'}
+
+# Check to see whether or not the sink-input is available
+SINKINPUT=$(pactl list sink-inputs | grep "Sink Input" | sed 's/.*#//')
+SINKINPUT=$(echo $SINKINPUT | sed 's/ .*$//')
 # While there is no sink-input is available continue 
 while [ $SINKINPUT != "" ];
 do
@@ -10,7 +14,8 @@ do
   sleep 1
   
   # Capture Sink Inputs Index Number
-  SINKINPUT=${pactl list sink-inputs | grep "Sink Input" | sed 's/.*#//'}  
+  SINKINPUT=$(pactl list sink-inputs | grep "Sink Input" | sed 's/.*#//')
+  SINKINPUT=$(echo $SINKINPUT | sed 's/ .*$//')
 done
 
 # Once a sink-input is available capture its index and move it to the default sink output
