@@ -18,6 +18,7 @@ First setup your chromecasts and create a multi device group via the app Google 
 ```
 git clone https://github.com/bareinhard/Multiroom-Audio-iOS
 cd Multiroom-Audio-iOS
+sudo chmod +x ./install.sh
 sudo ./install.sh
 
 # Currently working on a script that will automatically move the new input sink from shairport-sync to the desired output stream to the chromecast.
