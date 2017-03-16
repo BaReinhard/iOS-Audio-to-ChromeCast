@@ -24,12 +24,26 @@ excmd cp usr/local/bin/shairport-start /usr/local/bin/shairport-start
 
 # Makes the new script executable
 excmd chmod +x /usr/local/bin/shairport-start
+excmd cp usr/local/bin/changesink /usr/local/bin/changesink
+excmd chmod +x /usr/local/bin/changesink
+# Copies the new autostream handler to the proper bin directory
+excmd cp usr/local/bin/autostream /usr/local/bin/autostream
+echo "/usr/local/bin/autostream&" >> "/home/${UserName}/.profile"
+# Made the autostream handler executable
+excmd chmod +x /usr/local/bin/autostream
+
+# Copy the shell script that sets the default sink
+excmd cp usr/local/bin/setdefaultsink /usr/local/bin/setdefaultsink
+
+# Made  setdefaultsink executable
+excmd chmod +x /usr/local/bin/setdefaultsink
 
 # Inserts a line to /etc/rc.local to allow shairport-sync to execute as a non root user
-excmd sed -i -e "\$i \su ${UserName} - -c /usr/local/bin/shairport-start&\n" /etc/rc.local
+sed -i "\$i \su ${UserName} - -c /usr/local/bin/shairport-start&\n" /etc/rc.local
 
 # Inserts the Chosen AirPlay name into shairport-sync.conf at line 7
-excmd sed -i -e "\7i \name = "${AirPlay}";\n" /etc/shairport-sync.conf
+sed -i "7i \name = \"${AirPlay}\";" /etc/shairport-sync.conf
+
 
 # Added shairport-sync to the pulse and lp group
 excmd usermod -a -G pulse shairport-sync

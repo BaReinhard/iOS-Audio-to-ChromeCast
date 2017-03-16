@@ -1,0 +1,13 @@
+#!/bin/bash
+
+# Example to use this script is as follows:
+# e.g. -  setdefaultsink 1    #This will change the default sink to 1
+
+# Takes first parameter passed to the script and sets its equal to the new sink
+NEWSINK=$1
+
+# Captures existing Default Sink Number
+DEFAULTSINK=$(cat /usr/local/bin/autostream | grep SINKOUTPUT= | sed 's/.*=//')
+
+# Uses the existing default sink number and looks at line 5 to perform a replacment with the new sink number
+sed -i "5s/${DEFAULTSINK}/${NEWSINK}/" /usr/local/bin/autostream

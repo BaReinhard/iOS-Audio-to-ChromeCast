@@ -5,7 +5,7 @@ log="./install.log"
 echo "" | tee -a $log
 
 # Make all files executable if they aren't already
-chmod +x ./*
+chmod +x *
 
 # Prompts user for User Name of the user they are using to login (needed due to script being run as root)
 UserNameAnswer="UserNameAnswer"
@@ -37,13 +37,13 @@ function excmd {
 
 
 echo " =========================== Starting Prep Work ======================="
-excmd prep_install.sh | tee -a $log
+excmd ./prep_install.sh | tee -a $log
 echo " ======================================================================"
 echo " ====================== Installing Pulseaudio-dlna ===================="
-excmd pa_dlna_install.sh | tee -a $log
+excmd ./pa_dlna_install.sh | tee -a $log
 echo " ======================================================================"
 echo " ====================== Installing Shairport-Sync ====================="
-{ echo "${UserName}"; echo "${AirPlayName}";} | excmd shairport-sync_install.sh | tee -a $log
+{ echo "${UserName}"; echo "${AirPlayName}";} | excmd ./shairport-sync_install.sh | tee -a $log
 echo " ======================================================================"
 
 # Prompts the user to Reboot, gives the option in case the script failed inside an important step in a sub file

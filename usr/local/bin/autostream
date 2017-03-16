@@ -1,0 +1,14 @@
+#!/bin/bash
+
+# Edit this line to whatever Sink Index You prefer
+# Default Sink Output
+SINKOUTPUT=4
+
+
+
+
+pactl list short sink-inputs|while read stream; do
+    streamId=$(echo $stream|cut '-d ' -f1)
+    echo "moving stream $streamId"
+    pactl move-sink-input "$streamId" "$SINKOUTPUT"
+done

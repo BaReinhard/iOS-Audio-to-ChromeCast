@@ -20,13 +20,10 @@ git clone https://github.com/bareinhard/Multiroom-Audio-iOS
 cd Multiroom-Audio-iOS
 sudo chmod +x ./install.sh
 sudo ./install.sh
-
-# Currently working on a script that will automatically move the new input sink from shairport-sync to the desired output stream to the chromecast.
-# It can be done manually via:
-pactl list sinks   # You will get a list of sinks you want to sink to
-pactl list sink-inputs   # You will get an input sink only after starting to stream audio and connecting to AirPlay
-pactl move-input-sink {input sink #} {output sink #}
 ```
+Default Output Sink is set to 4, to change it use `setdefaultsink {sink number}`
+To swap sinks during playback use `changesink {sink number}`
+
 
 
 Thats it! Enjoy.
