@@ -24,6 +24,12 @@ sudo ./install.sh
 Default Output Sink is set to 4, to change it use `setdefaultsink {sink number}`
 To swap sinks during playback use `changesink {sink number}`
 
+## Some Basic Usage
 
+* If you are trying to changesinks after the initial boot-up you will need to run the command `sudo pkill autostream` then run `changesink {sink_number}` As the autostream script (for now) just simply loops and continues to command `pactl` to move the input stream to the default outputstream.
+* The command `changesink` does not have the looping effect and only runs once, so if `autostream` is not killed `changesink` will change the sink but `autostream` will immediately change it back to the default set in `/usr/local/bin/autostream` on line 5.
+* Another option if you would like to change the sink is to use `setdefaultsink {sink_number}` this will use `sed` and actually modify `autostream` so that the next time the Pi reboots it will use that as the default sink.
+
+* I am in the process of creating a Web UI that will take over the control of setting sinks and changing them during playback. This Web UI will remove the necessity of these other commands, but they will be left in place (but removed from boot) for the lovers of the CLI
 
 Thats it! Enjoy.
