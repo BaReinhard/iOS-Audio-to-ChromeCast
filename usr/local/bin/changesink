@@ -3,7 +3,7 @@
 # Example use of this file is :
 
 # $ changesink 3      #changes the active sink to Sink #3
-
+sudo pkill autostream
 
 # Edit this line to whatever Sink Index You prefer
 # Default Sink Output
