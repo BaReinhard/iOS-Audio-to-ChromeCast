@@ -2,23 +2,13 @@
 
 # Edit this line to whatever Sink Index You prefer
 # Default Sink Output
-SINKOUTPUT=3
+SINKOUTPUT=4
 
-# Check to see whether or not the sink-input is available
-SINKINPUT=$(pactl list sink-inputs | grep "Sink Input" | sed 's/.*#//')
-SINKINPUT=$(echo $SINKINPUT | sed 's/ .*$//')
-# While there is no sink-input is available continue 
-while [ $SINKINPUT != "" ];
-do
-  # Wait 1 second to try again
-  sleep 1
-  
-  # Capture Sink Inputs Index Number
-  SINKINPUT=$(pactl list sink-inputs | grep "Sink Input" | sed 's/.*#//')
-  SINKINPUT=$(echo $SINKINPUT | sed 's/ .*$//')
+
+
+
+pactl list short sink-inputs|while read stream; do
+    streamId=$(echo $stream|cut '-d ' -f1)
+    echo "moving stream $streamId"
+    pactl move-sink-input "$streamId" "$SINKOUTPUT"
 done
-
-# Once a sink-input is available capture its index and move it to the default sink output
-pactl move-sink-input ${SINKINPUT} ${SINKOUTPUT}
-
-exit 0
