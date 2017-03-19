@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html ng-app="multiRoomApp">
+        <head>
+                <meta charset=utf-8>
+                <title>Multiroom Audio</title>
+                <base href="/">
+                <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+                <script src="https://use.fontawesome.com/3e1b53e072.js"></script>
+                <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
+                <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.7/angular-route.js"></script>
+                <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        </head>
+        <body>
+                <header>
+
+                <h2> Welcome to the Multiroom Audio iOS Web User Interface</h2>
+                <h3><a href="#!/about">Go To About</a></h3>
+        </header>
+
+
+        <!-- MAIN CONTENT -->
+        <div id="main">
+
+
+                        <!-- ANGULAR TEMPLATE -->
+
+                        <div ng-view></div>
+        </div>
+
+                <!-- FOOTER -->
+                <footer class="text-center">
+                        Copyright &copy;2017 Brett Reinhard
+                </footer>
+        </body>
+
+
+        <!-- App Script--------->
+        <script src="/app/app.js"></script>
+        <!-- Controllers ---------------->
+        <script src="/app/controllers/HomeController.js"></script>
+        <script src="/app/controllers/AboutController.js"></script>
+
+
+        <!-- Services ------>
+        <script src="/app/services/buttonService.js"></script>
+
+
+</html>
