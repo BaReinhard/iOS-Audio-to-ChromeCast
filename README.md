@@ -34,4 +34,6 @@ sudo ./install.sh
 * `changesink {sink_number}` - this is almost identical to `autostream`, but it does not loop and takes a parameter to change the current input sink to the passed variable as the output sink. Running this will require that you run `sudo pkill autostream` prior to using `changesink`.
 ### UI Control
 * Web UI is supported, but you need to manually install node. All the files are in the node folder. You may also need to install a few modules manually as well.
+
+![Web UI Controls](https://scontent-lax3-2.cdninstagram.com/t51.2885-15/e35/17267738_399689447076638_779634115816194048_n.jpg)
 Thats it! Enjoy.
