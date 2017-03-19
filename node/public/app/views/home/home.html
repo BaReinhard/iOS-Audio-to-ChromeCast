@@ -4,7 +4,7 @@
                 <button type="button" class="btn btn-warning"> Refresh </button>
                 <div class="row">
                         <div class="col-xs-6"  id="buttons" ng-style="buttonStyle"  ng-repeat="b in buttons.responseData">
-                                <button type="button" class="btn btn-success" >{{b.name}}-{{b.sink}}</button>
+                                <button type="button" class="btn btn-success" ng-click="moveSink(b)">{{b.name}}-{{b.sink}}</button>
                         </div>
                 </div>
         </div>
