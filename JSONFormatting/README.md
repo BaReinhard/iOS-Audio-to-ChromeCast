@@ -2,9 +2,9 @@
 
 
 ```
-/home/brett/genSinks.sh > /home/brett/projects/node/public/app/sinks.json
-tac /home/brett/projects/node/public/app/sinks.json | sed '2 s/,$//' | tac > /home/brett/projects/node/public/app/sinks.json.new
-mv /home/brett/projects/node/public/app/sinks.{json.new,json}
+/home/{USERNAME}/genSinks.sh > /home/{USERNAME}/projects/node/public/app/sinks.json
+tac /home/{USERNAME}/projects/node/public/app/sinks.json | sed '2 s/,$//' | tac > /home/{USERNAME}/projects/node/public/app/sinks.json.new
+mv /home/{USERNAME}/projects/node/public/app/sinks.{json.new,json}
 ```
 
 ## Sample Output:
