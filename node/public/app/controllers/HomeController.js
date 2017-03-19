@@ -1,8 +1,12 @@
-multiRoomApp.controller('HomeController',['$scope', 'buttonService',function($scope,buttonService){
+multiRoomApp.controller('HomeController',['$scope', 'buttonService','$http',function($scope,buttonService,$http){
         $scope.buttons = {};
 
         $scope.buttons = buttonService;
-        console.log($scope.buttons);
+        
+        $scope.moveSink = function(sink){
+                       $http.post('/moveSinks', sink);
+                
+        }
 
 
 }]);
