@@ -33,6 +33,5 @@ sudo ./install.sh
 * `setdefault {sink_number}` - this will modify the default sink inside of `autostream`, used to set config of default sink
 * `changesink {sink_number}` - this is almost identical to `autostream`, but it does not loop and takes a parameter to change the current input sink to the passed variable as the output sink. Running this will require that you run `sudo pkill autostream` prior to using `changesink`.
 ### UI Control
-* I am in the process of creating a Web UI that will take over the control of setting sinks and changing them during playback. This Web UI will remove the necessity of these other commands, but they will be left in place (but removed from boot) for the lovers of the CLI
-
+* Web UI is supported, but you need to manually install node. All the files are in the node folder. You may also need to install a few modules manually as well.
 Thats it! Enjoy.

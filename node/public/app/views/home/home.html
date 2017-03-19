@@ -1,0 +1,12 @@
+<div class="jumbotron text-center">
+        <h2> Multiroom Audio Controller Page </h2>
+        <div class="container">
+                <button type="button" class="btn btn-warning"> Refresh </button>
+                <div class="row">
+                        <div class="col-xs-6"  id="buttons" ng-style="buttonStyle"  ng-repeat="b in buttons.responseData">
+                                <button type="button" class="btn btn-success" ng-click="moveSink(b)">{{b.name}}-{{b.sink}}</button>
+                        </div>
+                </div>
+        </div>
+</div>
+
