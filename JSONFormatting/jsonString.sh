@@ -18,7 +18,4 @@ do
         fi
 
 done
-
-
-#echo "{\"sinkIndex\":\" $(($sinkCounter - 1))\"}"
 echo ]
