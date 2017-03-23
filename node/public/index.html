@@ -4,19 +4,26 @@
                 <meta charset=utf-8>
                 <title>Multiroom Audio</title>
                 <base href="/">
+                <link rel="stylesheet" href="app/css/home.css">
                 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
                 <script src="https://use.fontawesome.com/3e1b53e072.js"></script>
                 <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
                 <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.7/angular-route.js"></script>
                 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                <script src="https://cdnjs.cloudflare.com/ajax/libs/angularjs-slider/6.1.0/rzslider.min.js"></script>
+                <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/angularjs-slider/6.1.0/rzslider.min.css" />
         </head>
-        <body>
+        <body ng-controller="HomeController as vm">
                 <header>
 
-                <h2> Welcome to the Multiroom Audio iOS Web User Interface</h2>
-                <h3><a href="#!/about">Go To About</a></h3>
-        </header>
 
+        </header>
+        <div class="rz-header">
+        <p style="text-align:center;font-size:3vw;font-weight:bold">Volume<p>
+        </div>
+        <div class="rz-container">
+        <rzslider id="rz1" rz-slider-model="vm.val"  rz-slider-options="{floor:0,ceil:100,onEnd:sliderChange}" "></rzslider>
+        </div>
 
         <!-- MAIN CONTENT -->
         <div id="main">
@@ -44,5 +51,6 @@
         <!-- Services ------>
         <script src="/app/services/buttonService.js"></script>
 
-
+        <!-- Filters ------->
+        <script src="app/filters/prettyName.js"></script>
 </html>
