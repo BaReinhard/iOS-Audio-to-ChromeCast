@@ -33,7 +33,7 @@ app.get('/refreshSinks',function(req,res){
 });
 app.post('/changeVolume', function(req,res){
         volume = req.body.volume;
-        exec("/home/brett/changeVolume.sh "+volume);
+        exec("~/changeVolume.sh "+volume);
         console.log(req.body.volume);
 });
 app.post('/moveSink',  function(req, res){
