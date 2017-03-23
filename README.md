@@ -30,7 +30,7 @@ sudo ./install.sh
 * Another option if you would like to change the sink is to use `setdefaultsink {sink_number}` this will use `sed` and actually modify `autostream` so that the next time the Pi reboots it will use that as the default sink.
 ### The Commands
 * `autostream` - this script continuously loops and sets any input sink to the default sink set in the script (default is sink 4)
-* `setdefault {sink_number}` - this will modify the default sink inside of `autostream`, used to set config of default sink
+* `setdefaultsink {sink_number}` - this will modify the default sink inside of `autostream`, used to set config of default sink
 * `changesink {sink_number}` - this is almost identical to `autostream`, but it does not loop and takes a parameter to change the current input sink to the passed variable as the output sink. Running this will require that you run `sudo pkill autostream` prior to using `changesink`.
 ### UI Control
 * Web UI is supported, but you need to manually install node. All the files are in the node folder. You may also need to install a few modules manually as well.
