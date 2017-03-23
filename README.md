@@ -36,7 +36,7 @@ sudo ./install.sh
 * Web UI is supported, but you need to manually install node. All the files are in the node folder. You may also need to install a few modules manually as well.
 
 In order to get the sinks to properly update you will also need to move a few files to correct places:
-the following files
+the following files and will likely need to be made executable as well.
 
 ```
 # Located in the JSONFormatting Directory will need to be placed in /home/username/
