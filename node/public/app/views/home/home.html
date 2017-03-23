@@ -1,12 +1,12 @@
-<div class="jumbotron text-center">
-        <h2> Multiroom Audio Controller Page </h2>
-        <div class="container">
-                <button type="button" class="btn btn-warning"> Refresh </button>
-                <div class="row">
-                        <div class="col-xs-6"  id="buttons" ng-style="buttonStyle"  ng-repeat="b in buttons.responseData">
-                                <button type="button" class="btn btn-success" ng-click="moveSink(b)">{{b.name}}-{{b.sink}}</button>
-                        </div>
-                </div>
+<div class="jumbotron text-center" >
+        <h2> MultiRoom Controller</h2>
+        <div class="container" >
+
+                                        <div class="repeatContainer">
+                                        <div class="imagecontainer"  ng-repeat="b in buttons.responseData" ><img src="app/img/speaker.png"  ng-click="moveSink(b)"  ><p class="sink-name"> {{b.name| removeUnderScore | removeDash | removeD$
+                                         </div>
+                                        </div>
+
         </div>
 </div>
 
