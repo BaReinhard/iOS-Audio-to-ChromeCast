@@ -20,7 +20,6 @@ fi
 PATH="$HOME/bin:$HOME/.local/bin:$PATH"
 pkill node
 node ~/projects/node/server&
-~/genSinkVol.sh > ~/projects/node/public/app/sinksVolume.json
 
 
 
