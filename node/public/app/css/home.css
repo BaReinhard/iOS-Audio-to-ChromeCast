@@ -1,0 +1,57 @@
+.imagecontainer img {
+        width: 90%;
+        float: left !important;
+        margin: 20px 0 20px 0;
+        display: block;
+        border-radius:14px;
+}
+.imagecontainer{
+        width:30%;
+        float:left;
+        opacity:.65;
+}
+.imagecontainer p {
+        float:none;
+        font-family: Tahoma;
+#       margin:1.66%;
+        line-height:5vw;
+        font-size:2vw !important;
+        font-weight: 800;
+        text-transform: uppercase;
+        border-bottom: 2px solid #f1f1f1;
+        width:90%;
+#       padding-bottom: 20px;
+}
+
+.rz-container{
+        width:95%;
+        margin: 5vw auto 0 auto;
+        background: linear-gradient(#fff,#6499ef,#fff);
+        border-radius:3vw;
+        padding: 5vw 2vw 2vw 2vw;
+        border: solid #54aacc;
+        height:100%;
+        opacity: .8;
+}
+.rz-header p{
+opacity:1;
+float:top;
+position:relative;
+}
+.rz-header{
+margin:3% 0 -10vw 0;
+}
+
+.rz-bubble{
+font-size:3vw;
+
+}
+
+.jumbotron.text-center.ng-scope{
+        background: linear-gradient(#ffffff,#6499ef,#ffffff);
+}
+
+.sink-name{
+        font-family: Tahoma;
+}
+
