@@ -35,5 +35,23 @@ sudo ./install.sh
 ### UI Control
 * Web UI is supported, but you need to manually install node. All the files are in the node folder. You may also need to install a few modules manually as well.
 
+In order to get the sinks to properly update you will also need to move a few files to correct places:
+the following files
+
+```
+# Located in the JSONFormatting Directory will need to be placed in /home/username/
+genSinks.sh
+executeJson.sh
+jsonString.sh
+
+# Located in the home directory will need to be placed in /home/username/
+changeVolume.sh
+runningSink.sh
+
+```
+
+I am still tracking down an issue where, you will have to refresh the page twice in order to get the most up to date sinks displayed on the Web UI, this should be a simple fix and done relativel soon.
+
+
 ![Web UI Controls](https://scontent-lax3-2.cdninstagram.com/t51.2885-15/e35/17267738_399689447076638_779634115816194048_n.jpg)
 Thats it! Enjoy.
