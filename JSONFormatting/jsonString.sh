@@ -6,16 +6,6 @@ parameters=$#
 numParameters=$((parameters/3))
 
 echo [
-#for (( param = 1; i<=${numParameters};param+4 ))
-#do
-#       nameParam=$((param+1))
-#       volParam=$((param+2))
-#       echo "{"
-#       echo " \"sink\" : \"${(${param})}\","
-#       echo " \"name\" : \"${$nameParam}\","
-#       echo " \"volume\" : \"${$volParam}\""
-#       echo " } ,"
-#done
 
 while [ $# -gt 0 ]
 do
