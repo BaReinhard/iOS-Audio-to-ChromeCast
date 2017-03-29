@@ -8,13 +8,7 @@ echo "" | tee -a $log
 chmod +x *
 
 # Prompts user for User Name of the user they are using to login (needed due to script being run as root)
-UserNameAnswer="UserNameAnswer"
-while [ $UserNameAnswer != "y" ];
-do
-  read -p "What is your username? : " UserName
-  echo "User name is : ${UserName}"
-  read -p "Is this correct? (y/n) : " UserNameAnswer
-done
+
 
 # Prompts user for AirPlay speaker name, to let them use a custom name for the speaker
 AirPlayNameAnswer="AirPlayNameAnswer"
@@ -43,7 +37,7 @@ echo " ====================== Installing Pulseaudio-dlna ===================="
 excmd ./pa_dlna_install.sh | tee -a $log
 echo " ======================================================================"
 echo " ====================== Installing Shairport-Sync ====================="
-{ echo "${UserName}"; echo "${AirPlayName}";} | excmd ./shairport-sync_install.sh | tee -a $log
+echo "${AirPlayName}" | excmd ./shairport-sync_install.sh | tee -a $log
 echo " ======================================================================"
 
 # Prompts the user to Reboot, gives the option in case the script failed inside an important step in a sub file
