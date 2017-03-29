@@ -6,6 +6,7 @@ echo "" | tee -a $log
 
 # Make all files executable if they aren't already
 chmod +x *
+if [ $SUDO_USER ]; then user=$SUDO_USER; else user=`whoami`; fi
 
 # Prompts user for User Name of the user they are using to login (needed due to script being run as root)
 
@@ -37,7 +38,7 @@ echo " ====================== Installing Pulseaudio-dlna ===================="
 excmd ./pa_dlna_install.sh | tee -a $log
 echo " ======================================================================"
 echo " ====================== Installing Shairport-Sync ====================="
-echo "${AirPlayName}" | excmd ./shairport-sync_install.sh | tee -a $log
+{ echo "${user}"; echo "${AirPlayName}"; } | excmd ./shairport-sync_install.sh | tee -a $log
 echo " ======================================================================"
 
 # Prompts the user to Reboot, gives the option in case the script failed inside an important step in a sub file
