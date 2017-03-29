@@ -1,6 +1,6 @@
 #!/bin/bash
 
-read -p "What is your User Name?: " UserName
+#read -p "What is your User Name?: " UserName
 read -p "What is your Device Name?: " AirPlay
 
 #============================== Error Handler ==========================
@@ -28,7 +28,7 @@ excmd cp usr/local/bin/changesink /usr/local/bin/changesink
 excmd chmod +x /usr/local/bin/changesink
 # Copies the new autostream handler to the proper bin directory
 excmd cp usr/local/bin/autostream /usr/local/bin/autostream
-echo "/usr/local/bin/autostream&" >> "/home/${UserName}/.profile"
+echo "/usr/local/bin/autostream&" >> ~/.profile
 # Made the autostream handler executable
 excmd chmod +x /usr/local/bin/autostream
 
@@ -39,7 +39,7 @@ excmd cp usr/local/bin/setdefaultsink /usr/local/bin/setdefaultsink
 excmd chmod +x /usr/local/bin/setdefaultsink
 
 # Inserts a line to /etc/rc.local to allow shairport-sync to execute as a non root user
-sed -i "\$i \su ${UserName} - -c /usr/local/bin/shairport-start&\n" /etc/rc.local
+echo /usr/local/bin/shairport-start& >> ~/.profile
 
 # Inserts the Chosen AirPlay name into shairport-sync.conf at line 7
 sed -i "7i \name = \"${AirPlay}\";" /etc/shairport-sync.conf
