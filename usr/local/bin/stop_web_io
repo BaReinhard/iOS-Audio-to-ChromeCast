@@ -1,0 +1,5 @@
+#!/bin/bash
+if [ $SUDO_USER ]; then user=$SUDO_USER; else user=`whoami`; fi
+pkill nodejs
+
+nodejs "/home/${user}/projects/node/server.js&"
