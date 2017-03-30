@@ -33,7 +33,7 @@ sudo ./install.sh
 * `setdefaultsink {sink_number}` - this will modify the default sink inside of `autostream`, used to set config of default sink
 * `changesink {sink_number}` - this is almost identical to `autostream`, but it does not loop and takes a parameter to change the current input sink to the passed variable as the output sink. Running this will require that you run `sudo pkill autostream` prior to using `changesink`.
 ### UI Control
-* Web UI is now supported and working out the box, simply run the command `start_web_ui`
+* Web UI is now supported and working out the box, simply run the command `start_web_ui` and visit the ip address of your pi on port 2221 in your web browser. i.e. 192.168.0.18:2221
 
 
 ![Web UI Controls](http://i967.photobucket.com/albums/ae153/bbejj1234/Screenshot%202017-03-29%2019.49.56_2.png)
