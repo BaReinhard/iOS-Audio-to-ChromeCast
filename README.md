@@ -36,5 +36,5 @@ sudo ./install.sh
 * Web UI is now supported and working out the box, simply run the command `start_web_ui`
 
 
-![Web UI Controls](https://photos-2.dropbox.com/t/2/AABYb6v2J3CIXWJHmwshm7Kx5qT3lum01H08gnl7JYDRAg/12/207990524/png/32x32/1/_/1/2/Screenshot%202017-03-29%2019.49.56.png/EKrw-ZwBGPYbIAcoBw/-VZ49fsE6-ylplRu-lsiNIElvRvkJlqjFD6ztptFRxw?size=1280x960&size_mode=3)
+![Web UI Controls](http://i967.photobucket.com/albums/ae153/bbejj1234/Screenshot%202017-03-29%2019.49.56_2.png)
 Thats it! Enjoy.
