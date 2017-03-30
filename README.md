@@ -25,15 +25,15 @@ sudo ./install.sh
 ## Some Basic Usage
 
 ### Changing Sinks
-* If you are trying to changesinks after the initial boot-up you will need to run the command `sudo pkill autostream` then run `changesink {sink_number}` As the autostream script (for now) just simply loops and continues to command `pactl` to move the input stream to the default outputstream.
-* The command `changesink` does not have the looping effect and only runs once, so if `autostream` is not killed `changesink` will change the sink but `autostream` will immediately change it back to the default set in `/usr/local/bin/autostream` on line 5.
-* Another option if you would like to change the sink is to use `setdefaultsink {sink_number}` this will use `sed` and actually modify `autostream` so that the next time the Pi reboots it will use that as the default sink.
+* If you are trying to changesinks will need to run the command  `changesink {sink_number}` or use the Web UI, more information below.
 ### The Commands
-* `autostream` - this script continuously loops and sets any input sink to the default sink set in the script (default is sink 4)
-* `setdefaultsink {sink_number}` - this will modify the default sink inside of `autostream`, used to set config of default sink
-* `changesink {sink_number}` - this is almost identical to `autostream`, but it does not loop and takes a parameter to change the current input sink to the passed variable as the output sink. Running this will require that you run `sudo pkill autostream` prior to using `changesink`.
-### UI Control
-* Web UI is now supported and working out the box, simply run the command `start_web_ui` and visit the ip address of your pi on port 2221 in your web browser. i.e. 192.168.0.18:2221
+* `changesink {sink_number}` - this is almost identical to `autostream`, but it does not loop and takes a parameter to change the current input sink to the passed variable as the output sink.
+*#### WEB UI
+* `start_web_ui` - this command will start `nodejs` with the proper `server.js` file location in `/home/user/projects/node`. You will be able to see the Web UI at your Pi's ip address on port 2221 inside your favorite web browser, i.e. 192.168.0.18:2221. The Web UI was made for use with chrome, some functionality may be missing in other browsers. For the time being, the volume control has not been setup properly and isn't working (this will be fixed shortly).
+* `stop_web_ui` - this command will kill the `nodejs` instance and the Web UI will not longer be visible in a web browser.
+* `restart_web_ui` - this command will kill the `nodejs` instance then restart `nodejs` in the same manner as `start_web_ui`, this command is essentially a combination of both `start_web_ui` and `stop_web_ui`. `restart_web_ui` is used mainly to refresh the sinks. This refreshing of sinks will be shortly available as a button inside the Web UI.
+
+
 
 
 ![Web UI Controls](http://i967.photobucket.com/albums/ae153/bbejj1234/Screenshot%202017-03-29%2019.49.56_2.png)
