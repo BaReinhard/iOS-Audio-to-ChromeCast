@@ -28,7 +28,7 @@ sudo ./install.sh
 * If you are trying to changesinks will need to run the command  `changesink {sink_number}` or use the Web UI, more information below.
 ### The Commands
 * `changesink {sink_number}` - this is almost identical to `autostream`, but it does not loop and takes a parameter to change the current input sink to the passed variable as the output sink.
-*#### WEB UI
+* #### WEB UI
 * `start_web_ui` - this command will start `nodejs` with the proper `server.js` file location in `/home/user/projects/node`. You will be able to see the Web UI at your Pi's ip address on port 2221 inside your favorite web browser, i.e. 192.168.0.18:2221. The Web UI was made for use with chrome, some functionality may be missing in other browsers. For the time being, the volume control has not been setup properly and isn't working (this will be fixed shortly).
 * `stop_web_ui` - this command will kill the `nodejs` instance and the Web UI will not longer be visible in a web browser.
 * `restart_web_ui` - this command will kill the `nodejs` instance then restart `nodejs` in the same manner as `start_web_ui`, this command is essentially a combination of both `start_web_ui` and `stop_web_ui`. `restart_web_ui` is used mainly to refresh the sinks. This refreshing of sinks will be shortly available as a button inside the Web UI.
