@@ -20,8 +20,8 @@ echo \n | apt-add-repository ppa:dantheperson/shairplay-sync
 curl -sL https://deb.nodesource.com/setup | bash -
 
 # Updates and upgrades the sources and installed files
-apt-get update -y
-apt-get upgrade -y
+echo \n | apt-get update -y
+echo \n | apt-get upgrade -y
 
 # Creates an /etc/asound.conf file in case it doesn't exist so that backing up the /etc/asound.conf file doesn't faile
 echo "" | tee -a /etc/asound.conf
