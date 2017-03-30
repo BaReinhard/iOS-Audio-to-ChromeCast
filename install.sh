@@ -44,6 +44,12 @@ echo " ====================== Installing Node JS ============================"
 excmd ./node_install.sh | tee -a $log
 echo " ======================= END =========================================="
 
+echo "If you would like to request some other functionality, have suggestions, or found something doesn't work quite right."
+echo "Please open an issue at https://github.com/BaReinhard/Multiroom-Audio-iOS/issues"
+echo "Thank you, and enjoy your new Multiroom-Audio-iOS project."
+echo "Be sure to checkout the new Web UI by simply typing start_web_ui and visit your ip address on port 2221 i.e. 192.168.0.18:2221 in your web browser"
+echo "\n"
+echo "\n"
 # Prompts the user to Reboot, gives the option in case the script failed inside an important step in a sub file
 REBOOT="REBOOT"
 while [ $REBOOT != "y" ] && [ $REBOOT != "n" ];
@@ -51,6 +57,14 @@ do
   echo "It is suggested that you reboot your system at this time"
   read -p "Would you line to reboot now? (y/n) :" REBOOT
 done
+
+if [ $REBOOT = "y" ] then
+  reboot
+else
+  echo "Some functionality, may not work until the Raspberry Pi has been restarted"
+fi
+
+
 exit 0
 
 
