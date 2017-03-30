@@ -41,10 +41,16 @@ mv "/home/${user}/projects/node/public/app/img/Speaker-512.png" "/home/${user}/p
 cp usr/local/bin/start_web_ui /usr/local/bin/start_web_ui
 
 # Move restart_web_ui to /usr/local/bin
-cp usr/local/bin/start_web_ui /usr/local/bin/restart_web_ui
+cp usr/local/bin/restart_web_ui /usr/local/bin/restart_web_ui
 
 # Move stop_web_ui to /usr/local/bin
-cp usr/local/bin/start_web_ui /usr/local/bin/stop_web_ui
+cp usr/local/bin/stop_web_ui /usr/local/bin/stop_web_ui
+
+# Move enable_web_startup to /usr/local/bin
+cp usr/local/bin/enable_web_startup /usr/local/bin/enable_web_startup
+
+# Make enable_web_startup executable
+chmod +x /usr/local/bin/enable_web_startup
 
 # Make start_web_ui executable
 chmod +x /usr/local/bin/start_web_ui
