@@ -40,6 +40,9 @@ echo " ======================================================================"
 echo " ====================== Installing Shairport-Sync ====================="
 { echo "${user}"; echo "${AirPlayName}"; } | excmd ./shairport-sync_install.sh | tee -a $log
 echo " ======================================================================"
+echo " ====================== Installing Node JS ============================"
+excmd ./node_install.sh | tee -a $log
+echo " ======================= END =========================================="
 
 # Prompts the user to Reboot, gives the option in case the script failed inside an important step in a sub file
 REBOOT="REBOOT"
