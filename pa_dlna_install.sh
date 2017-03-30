@@ -11,7 +11,7 @@ function excmd {
 #============================== End Error Handler ======================
 
 # Installs Pulseaudio-dlna (talk about overcommenting)
-apt-get install pulseaudio-dlna
+apt-get install pulseaudio-dlna -y
 
 # Adds pulseaudio-dlna to the /etc/rc.local file just before the last line (exit 0)
 sed -i '$i \pulseaudio-dlna&\n' /etc/rc.local
