@@ -1,0 +1,7 @@
+#!/bin/bash
+
+if [ $SUDO_USER ]; then user=$SUDO_USER; else user=`whoami`; fi
+echo "start_web_ui" >> "/home/${user}/.profile"
+
+echo "The Web UI will now be started everytime ${user} logs in."
+echo "To disable this, please edit your \"/home/${user}/.profile\" file and remove \"start_web_ui\""

@@ -1,4 +1,0 @@
-#!/bin/bash
-
-if [ $SUDO_USER ]; then user=$SUDO_USER; else user=`whoami`; fi
-echo "start_web_ui" >> "/home/${user}/.profile"
