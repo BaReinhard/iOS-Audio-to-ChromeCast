@@ -16,6 +16,9 @@ echo \n | apt-add-repository ppa:qos/pulseaudio-dlna
 # Adds shairport-sync repo to the sources list
 echo \n | apt-add-repository ppa:dantheperson/shairplay-sync
 
+# Adds nodejs to the sources list
+curl -sL https://deb.nodesource.com/setup | bash -
+
 # Updates and upgrades the sources and installed files
 apt-get update -y
 apt-get upgrade -y
