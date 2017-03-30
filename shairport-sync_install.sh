@@ -14,10 +14,10 @@ function excmd {
 #============================== End Error Handler ======================
 
 # Installs shairport-sync
-apt-get install shairport-sync
+apt-get install shairport-sync -y
 
 # Disables shairport-sync as a system daemon
-excmd systemctl disable shairport-sync
+systemctl disable shairport-sync
 
 # Copies the new shairport-start script which will handle starting shairport
 excmd cp usr/local/bin/shairport-start /usr/local/bin/shairport-start
