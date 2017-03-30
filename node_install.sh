@@ -52,3 +52,9 @@ wget https://cdn4.iconfinder.com/data/icons/proglyphs-multimedia/512/Speaker-512
 
 # Name Speaker-512.png to speaker.png
 mv "/home/${user}/projects/node/public/app/img/Speaker-512.png" "/home/${user}/projects/node/public/app/img/speaker.png"
+
+# Move start_web_ui to /usr/local/bin
+cp usr/local/bin/start_web_ui /usr/local/bin/start_web_ui
+
+# Make it executable
+chmod +x /usr/local/bin/start_web_ui
