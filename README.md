@@ -33,25 +33,8 @@ sudo ./install.sh
 * `setdefaultsink {sink_number}` - this will modify the default sink inside of `autostream`, used to set config of default sink
 * `changesink {sink_number}` - this is almost identical to `autostream`, but it does not loop and takes a parameter to change the current input sink to the passed variable as the output sink. Running this will require that you run `sudo pkill autostream` prior to using `changesink`.
 ### UI Control
-* Web UI is supported, but you need to manually install node. All the files are in the node folder. You may also need to install a few modules manually as well.
-
-In order to get the sinks to properly update you will also need to move a few files to correct places:
-the following files and will likely need to be made executable as well.
-
-```
-# Located in the JSONFormatting Directory will need to be placed in /home/username/
-genSinks.sh
-executeJson.sh
-jsonString.sh
-
-# Located in the home directory will need to be placed in /home/username/
-changeVolume.sh
-runningSink.sh
-
-```
-
-I am still tracking down an issue where, you will have to refresh the page twice in order to get the most up to date sinks displayed on the Web UI, this should be a simple fix and done relativel soon.
+* Web UI is now supported and working out the box, simply run the command `start_web_ui`
 
 
-![Web UI Controls](https://scontent-lax3-2.cdninstagram.com/t51.2885-15/e35/17267738_399689447076638_779634115816194048_n.jpg)
+![Web UI Controls](https://photos-2.dropbox.com/t/2/AABYb6v2J3CIXWJHmwshm7Kx5qT3lum01H08gnl7JYDRAg/12/207990524/png/32x32/1/_/1/2/Screenshot%202017-03-29%2019.49.56.png/EKrw-ZwBGPYbIAcoBw/-VZ49fsE6-ylplRu-lsiNIElvRvkJlqjFD6ztptFRxw?size=1280x960&size_mode=3)
 Thats it! Enjoy.
