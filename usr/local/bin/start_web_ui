@@ -1,0 +1,3 @@
+#!/bin/bash
+if [ $SUDO_USER ]; then user=$SUDO_USER; else user=`whoami`; fi
+nodejs "/home/${user}/projects/node/server.js&
