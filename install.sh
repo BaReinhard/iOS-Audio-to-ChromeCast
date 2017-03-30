@@ -50,6 +50,25 @@ echo "Thank you, and enjoy your new Multiroom-Audio-iOS project."
 echo "Be sure to checkout the new Web UI by simply typing start_web_ui and visit your ip address on port 2221 i.e. 192.168.0.18:2221 in your web browser"
 echo "\n"
 echo "\n"
+# Asks user if they want the server to start on every boot
+NODE="NODE"
+while [ $NODE != "y" ] && [ $NODE != "n" ];
+do
+  echo "Would you like to have the WEB UI start every time ${user} logs in?"
+  read -p "Make Web UI available at each login? (y/n) :" NODE
+done
+
+if [ $NODE = "y" ] then
+  echo "start_web_ui" >> "/home/${user}/.profile"
+  echo "The Web UI will now be start every time ${user} logs in"
+else
+  echo "Web UI, will need to be started manually after each reboot, if you every change your mind please run the following command:"
+  echo "enable_web_startup"
+fi
+
+# Enable Web UI at startup
+chmod +x /usr/local/bin/enable_web_startup
+
 # Prompts the user to Reboot, gives the option in case the script failed inside an important step in a sub file
 REBOOT="REBOOT"
 while [ $REBOOT != "y" ] && [ $REBOOT != "n" ];
