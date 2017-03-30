@@ -13,27 +13,11 @@ function excmd {
 # Install nodejs
 apt-get install nodejs -y
 
-
 # Install Node Package Manager
 apt-get install npm -y
 
-# Install Express
-npm install express
-
-# Install Morgan
-npm install morgan
-
-# Install Body-Parser
-npm install body-parser
-
-# Install method-override
-npm install method-override
-
 # Add nodejs startup command to .profile
-echo "nodejs /home/${user}/projects/node/server.js" >> "/home/${user}/.profile
-
-# Install Angularjs-slider
-npm install angularjs-slider
+echo "nodejs /home/${user}/projects/node/server.js" >> "/home/${user}/.profile"
 
 # Move Necessary files to home directory
 cp JSONFormatting/* "/home/${user}/"
@@ -58,3 +42,21 @@ cp usr/local/bin/start_web_ui /usr/local/bin/start_web_ui
 
 # Make it executable
 chmod +x /usr/local/bin/start_web_ui
+
+# Navigate to proper folder
+cd "/home/${user}/projects/node/"
+
+# Install Express
+npm install express
+
+# Install Morgan
+npm install morgan
+
+# Install Body-Parser
+npm install body-parser
+
+# Install method-override
+npm install method-override
+
+# Install Angularjs-slider
+npm install angularjs-slider
