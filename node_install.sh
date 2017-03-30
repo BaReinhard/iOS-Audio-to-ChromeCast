@@ -40,8 +40,20 @@ mv "/home/${user}/projects/node/public/app/img/Speaker-512.png" "/home/${user}/p
 # Move start_web_ui to /usr/local/bin
 cp usr/local/bin/start_web_ui /usr/local/bin/start_web_ui
 
-# Make it executable
+# Move restart_web_ui to /usr/local/bin
+cp usr/local/bin/start_web_ui /usr/local/bin/restart_web_ui
+
+# Move stop_web_ui to /usr/local/bin
+cp usr/local/bin/start_web_ui /usr/local/bin/stop_web_ui
+
+# Make start_web_ui executable
 chmod +x /usr/local/bin/start_web_ui
+
+# Make stop_web_ui executable
+chmod +x /usr/local/bin/stop_web_ui
+
+# Make restart_web_ui executable
+chmod +x /usr/local/bin/restart_web_ui
 
 # Navigate to proper folder
 cd "/home/${user}/projects/node/"
