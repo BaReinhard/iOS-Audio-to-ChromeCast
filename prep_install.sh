@@ -11,10 +11,10 @@ function excmd {
 #============================== End Error Handler ======================
 
 # Adds pulseaudio-dlna repo to sources list
-apt-add-repository ppa:qos/pulseaudio-dlna
+echo \n | apt-add-repository ppa:qos/pulseaudio-dlna
 
 # Adds shairport-sync repo to the sources list
-apt-add-repository ppa:dantheperson/shairplay-sync
+echo \n | apt-add-repository ppa:dantheperson/shairplay-sync
 
 # Updates and upgrades the sources and installed files
 apt-get update -y
