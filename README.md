@@ -1,5 +1,5 @@
 # Multiroom-Audio-iOS
-All the Pertinent files for setting up a Raspberry Pi to server AirPlay music to Multiple Chromecasts
+Audio Streaming from iOS devices to Google Chromecast Audio Devices.
 
 ## What's needed?
 * Raspberry Pi Running Ubuntu MATE
