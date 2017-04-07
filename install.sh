@@ -82,8 +82,7 @@ if [ $REBOOT = "y" ] then
 else
   echo "Some functionality, may not work until the Raspberry Pi has been restarted"
 fi
-else
-fi
+
 
 exit 0
 
