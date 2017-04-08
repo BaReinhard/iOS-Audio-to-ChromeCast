@@ -58,7 +58,7 @@ do
   read -p "Make Web UI available at each login? (y/n) :" NODE
 done
 
-if [ $NODE = "y" ] then
+if [ $NODE = "y" ]; then
   echo "start_web_ui" >> "/home/${user}/.profile"
   echo "The Web UI will now be start every time ${user} logs in"
 else
@@ -77,7 +77,7 @@ do
   read -p "Would you line to reboot now? (y/n) :" REBOOT
 done
 
-if [ $REBOOT = "y" ] then
+if [ $REBOOT = "y" ]; then
   reboot
 else
   echo "Some functionality, may not work until the Raspberry Pi has been restarted"
