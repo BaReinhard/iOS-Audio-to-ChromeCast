@@ -5,12 +5,13 @@ multiRoomApp.controller('HomeController',['$scope', 'buttonService', '$http' ,'$
         $scope.buttons = {};
 
         $scope.buttons = buttonService;
-        $scope.volume = $scope.buttons.volume;
+        $scope.volume = $scope.buttons[0].volume;
         $scope.currentVolume = 100;
         $scope.currentSink = 0;
         vm.val = 100;
-        $scope.sliderChange= function(sliderId,sliderVal){
-                $scope.volume = {volume: sliderVal};
+        $scope.val = $scope.volume;
+        $scope.sliderChange= function(){
+                $scope.volume = {volume: $scope.val};
                 $http.post('/changeVolume',$scope.volume);
 };
         $scope.refreshSinks = function(){
