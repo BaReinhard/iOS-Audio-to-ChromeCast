@@ -29,7 +29,6 @@ app.get('/refreshSinks',function(req,res){
 
         res.status(200)
         res.end();
-        return 1;
 });
 app.post('/changeVolume', function(req,res){
         volume = req.body.volume;
