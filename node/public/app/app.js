@@ -1,4 +1,4 @@
-var multiRoomApp = angular.module('multiRoomApp',['ngRoute']);
+var multiRoomApp = angular.module('multiRoomApp',['ngRoute','rzModule']);
 
 // configure out routes
 multiRoomApp.config(function($routeProvider){
