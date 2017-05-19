@@ -5,6 +5,13 @@
         display: block;
         border-radius:14px;
 }
+.buttons{
+    background: url('../img/speaker.png') no-repeat;
+    background-size: 100%;
+    height: 75px; width: 75px;
+    border-radius:15px;
+    margin: 0 auto
+}
 .imagecontainer{
         width:30%;
         float:left;
@@ -54,4 +61,34 @@ font-size:3vw;
 .sink-name{
         font-family: Tahoma;
 }
+@media (min-width:320px)  { 
+ 
+	
+	}/* smartphones, iPhone, portrait 480x320 phones */ 
+
+@media (min-width:481px)  {
+
+	
+	} 
+@media (max-width:481px)  {
+	
+	
+	}/* portrait e-readers (Nook/Kindle), smaller tablets @ 600 or @ 640 wide. */ 
+@media (min-width:641px)  { 
+	
+	
+	}/* portrait tablets, portrait iPad, landscape e-readers, landscape 800x480 or 854x480 phones */ 
+@media (min-width:961px)  { 
+	
+	}/* tablet, landscape iPad, lo-res laptops ands desktops */ 
+@media (min-width:1025px) { 
+	
+	}/* big landscape tablets, laptops, and desktops */ 
+@media (min-width:1281px) { 
+
+	.buttons{
+        height: 250px;
+        width: 250px;
+	}
+	}/* hi-res laptops and desktops */ 
 
