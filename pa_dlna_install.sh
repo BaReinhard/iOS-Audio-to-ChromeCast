@@ -16,4 +16,6 @@ apt-get install pulseaudio-dlna -y
 # Adds pulseaudio-dlna to the /etc/rc.local file just before the last line (exit 0)
 sed -i '$i \pulseaudio-dlna&\n' /etc/rc.local
 
+mv ~/.config/pulse ~/.config/pulse.bad
+
 exit 0

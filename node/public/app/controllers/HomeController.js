@@ -1,30 +1,31 @@
-multiRoomApp.controller('HomeController',['$scope', 'buttonService', '$http' ,'$timeout', function($scope,buttonService,$http,$timeout){
+multiRoomApp.controller('HomeController',['$scope','buttonService', '$http' ,'$timeout', function($scope,buttonService,$http,$timeout){
+    $scope.getButtons = function () {
+        buttonService.get().then(function (buttons) {
+            $scope.buttons = buttons.data;
+            $scope.currentVolume = 100;
+            $scope.currentSink = 0;
+            $scope.val = parseInt($scope.buttons[0].volume);
+            $scope.sliderEnd = function () {
+                $scope.buttons[$scope.currentSink].volume = $scope.val;
+                $http.post('/changeVolume', $scope.volume);
+            }
+        });
+    }
+    // Get Buttons/Sinks
+    $scope.getButtons();
+   
 
-        var vm = this;
+    // Called on to Refresh Buttons
+    $scope.refreshSinks = function(){
+        $http.get('/refreshSinks').then(function () {
+            $scope.getButtons();
+        });        
+    }
 
-        $scope.buttons = {};
-
-        $scope.buttons = buttonService;
-
-        $scope.currentVolume = 100;
-        $scope.currentSink = 0;
-        vm.val = 100;
-        $scope.sliderChange= function(sliderId,sliderVal){
-                volume = {volume: sliderVal};
-                $http.post('/changeVolume',volume);
-};
-
-        $scope.moveSink = function(sink){
-                console.log(vm.val);
-                console.log($scope.currentVolume);
-                console.log($scope.currentSink);
-                console.log(sink.volume);
-                sink.volume =  vm.val;
-                console.log(sink.volume);
-                $scope.currentSink = sink.sink;
-                $http.post('/moveSink', sink);
-
-
-        }
+    $scope.moveSink = function (index) {
+        $scope.val = parseInt($scope.buttons[index].volume);
+        $scope.currentSink = $scope.buttons[index].sink;
+        $http.post('/moveSink', $scope.currentSink);
+    }
 
 }]);

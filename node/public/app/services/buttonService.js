@@ -1,17 +1,12 @@
-multiRoomApp.factory('buttonService',['$http',function($http){
-        var fact = {};
-        //$http.get('/refreshSinks');
-        $http.get('app/sinks.json').then(function(response){
-                fact.responseData = response.data;
-                console.log(fact.responseData);
-                console.log(fact.responseData.volume);
-        });
+multiRoomApp.service('buttonService',['$http',function($http){
+    return {
+        get : function(){
+            
+            return  $http.get('app/sinks.json');
+        }
+        
 
-        return fact;
-        }]);
+            
 
-
-
-
-
-
+    }
+}]);
