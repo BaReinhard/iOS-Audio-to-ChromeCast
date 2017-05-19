@@ -1,38 +1,35 @@
-multiRoomApp.controller('HomeController',['$scope', 'buttonService', '$http' ,'$timeout', function($scope,buttonService,$http,$timeout){
+multiRoomApp.controller('HomeController',['$scope','buttonService', '$http' ,'$timeout', function($scope,buttonService,$http,$timeout){
 
-        var vm = this;
+        // Self Executing Anonymous Function
+    (function () {
+        $scope.getButtons(); 
+    })();
+    
+    // Gets All Buttons/Sinks
+    $scope.getButtons = function () {
+        buttonService.get().then(function (buttons) {
+            $scope.buttons = buttons.data;
+            $scope.currentVolume = 100;
+            $scope.currentSink = 0;
+            $scope.val = parseInt($scope.buttons[0].volume);
+            $scope.sliderEnd = function () {
+                $scope.buttons[$scope.currentSink].volume = $scope.val;
+                $http.post('/changeVolume', $scope.volume);
+            }
+        });
+    }
 
-        $scope.buttons = {};
+    // Called on Refresh Buttons
+    $scope.refreshSinks = function(){
+        $http.get('/refreshSinks').then(function () {
+            $scope.getButtons();
+        });        
+    }
 
-        $scope.buttons = buttonService;
-        $scope.volume = $scope.buttons[0].volume;
-        $scope.currentVolume = 100;
-        $scope.currentSink = 0;
-        vm.val = 100;
-        $scope.val = $scope.volume;
-        $scope.sliderChange= function(){
-                $scope.volume = {volume: $scope.val};
-                $http.post('/changeVolume',$scope.volume);
-};
-        $scope.refreshSinks = function(){
-                $http.get('/refreshSinks').then(function(){
-                        $scope.buttons = buttonService;       
-                        
-                }
-                
-        }
-
-        $scope.moveSink = function(sink){
-                console.log(vm.val);
-                console.log($scope.currentVolume);
-                console.log($scope.currentSink);
-                console.log(sink.volume);
-                sink.volume =  vm.val;
-                console.log(sink.volume);
-                $scope.currentSink = sink.sink;
-                $http.post('/moveSink', sink);
-
-
-        }
+    $scope.moveSink = function (index) {
+        $scope.val = parseInt($scope.buttons[index].volume);
+        $scope.currentSink = $scope.buttons[index].sink;
+        $http.post('/moveSink', $scope.currentSink);
+    }
 
 }]);
