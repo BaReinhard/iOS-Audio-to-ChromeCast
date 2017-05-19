@@ -13,17 +13,12 @@
                 <script src="https://cdnjs.cloudflare.com/ajax/libs/angularjs-slider/6.1.0/rzslider.min.js"></script>
                 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/angularjs-slider/6.1.0/rzslider.min.css" />
         </head>
-        <body ng-controller="HomeController as vm">
+        <body>
                 <header>
 
 
         </header>
-        <div class="rz-header">
-        <p style="text-align:center;font-size:3vw;font-weight:bold">Volume<p>
-        </div>
-        <div class="rz-container">
-        <rzslider id="rz1" rz-slider-model="vm.val"  rz-slider-options="{floor:0,ceil:100,onEnd:sliderChange}"></rzslider>
-        </div>
+       
 
         <!-- MAIN CONTENT -->
         <div id="main">
@@ -33,10 +28,9 @@
 
                         <div ng-view></div>
         </div>
-
                 <!-- FOOTER -->
                 <footer class="text-center">
-                        Copyright &copy;2017 Brett Reinhard
+                        
                 </footer>
         </body>
 
