@@ -1,11 +1,4 @@
 multiRoomApp.controller('HomeController',['$scope','buttonService', '$http' ,'$timeout', function($scope,buttonService,$http,$timeout){
-
-        // Self Executing Anonymous Function
-    (function () {
-        $scope.getButtons(); 
-    })();
-    
-    // Gets All Buttons/Sinks
     $scope.getButtons = function () {
         buttonService.get().then(function (buttons) {
             $scope.buttons = buttons.data;
@@ -18,8 +11,11 @@ multiRoomApp.controller('HomeController',['$scope','buttonService', '$http' ,'$t
             }
         });
     }
+    // Get Buttons/Sinks
+    $scope.getButtons();
+   
 
-    // Called on Refresh Buttons
+    // Called on to Refresh Buttons
     $scope.refreshSinks = function(){
         $http.get('/refreshSinks').then(function () {
             $scope.getButtons();
