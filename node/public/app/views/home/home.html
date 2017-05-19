@@ -1,12 +1,22 @@
+<div class="rz-header">
+    <p style="text-align:center;font-size:3vw;font-weight:bold">Volume<p>
+</div>
+<div class="rz-container">
+    <rzslider id="rz1" rz-slider-model="val" rz-slider-options="{floor:0,ceil:100,onEnd:sliderEnd}"></rzslider>
+</div>
+
 <div class="jumbotron text-center" >
         <h2> MultiRoom Controller</h2>
         <div class="container" >
 
                                         <div class="repeatContainer">
-                                        <div class="imagecontainer"  ng-repeat="b in buttons.responseData" ><img src="app/img/speaker.png"  ng-click="moveSink(b)"  ><p class="sink-name"> {{b.name| removeUnderScore | removeDash | removeDot | removeChromeCast | removeAlsa | firstFifteen }}
+                                        <div class="imagecontainer"  ng-repeat="b in buttons" ><div class="buttons"  ng-click="moveSink($index)"></div><p class="sink-name"> {{b.name| removeUnderScore | removeDash | removeDot | removeChromeCast | removeAlsa | firstFifteen }}
                                          </div>
                                         </div>
 
         </div>
 </div>
+
+
+<div>The new value on the slider should be this: {{val}}</div>
 
