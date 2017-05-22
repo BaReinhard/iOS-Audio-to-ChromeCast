@@ -36,5 +36,5 @@ sudo ./install.sh
 
 
 
-![Web UI Controls](http://i967.photobucket.com/albums/ae153/bbejj1234/Screenshot%202017-03-29%2019.49.56_2.png)
+![Web UI Controls](https://github.com/BaReinhard/Multiroom-Audio-iOS/blob/master/multiroom.PNG?raw=true)
 Thats it! Enjoy.
