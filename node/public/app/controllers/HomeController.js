@@ -7,7 +7,7 @@ multiRoomApp.controller('HomeController',['$scope','buttonService', '$http' ,'$t
             $scope.val = parseInt($scope.buttons[0].volume);
             $scope.sliderEnd = function () {
                 $scope.buttons[$scope.currentSink].volume = $scope.val;
-                $http.post('/changeVolume', $scope.volume);
+                $http.post('/changeVolume', {volume: $scope.volume});
             }
         });
     }
@@ -25,7 +25,7 @@ multiRoomApp.controller('HomeController',['$scope','buttonService', '$http' ,'$t
     $scope.moveSink = function (index) {
         $scope.val = parseInt($scope.buttons[index].volume);
         $scope.currentSink = $scope.buttons[index].sink;
-        $http.post('/moveSink', $scope.currentSink);
+        $http.post('/moveSink', {sink: $scope.currentSink});
     }
 
 }]);
