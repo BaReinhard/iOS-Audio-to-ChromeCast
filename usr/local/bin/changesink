@@ -6,9 +6,11 @@
 pkill autostream
 
 # Edit this line to whatever Sink Index You prefer
-# Default Sink Output
-SINKOUTPUT=$1
-
+echo 'Here is a list of outputs detected on your system.  
+echo 'Please enter which output you want?'
+echo 'For Example: Type "1" if the desired output for your Chromecast Audio device is on sink #1'
+pactl list short sinks
+read SINKOUTPUT
 
 
 
