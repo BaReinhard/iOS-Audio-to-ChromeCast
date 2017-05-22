@@ -5,15 +5,15 @@
 # $ changesink 3      #changes the active sink to Sink #3
 pkill autostream
 
-# Check if a value has been passed on from server.js, if not, then ask for a value to be given manually
-if [ $1 -eq 0 ] ; then
-    SINKOUTPUT=$1
-else
+# Check if a value has been passed on from server.js.  If it has not, then ask for a value to be given manually.  
+if [ -z ${1+x} ]; then
     echo 'Here is a list of outputs detected on your system.  
     echo 'Please enter which output you want?'
     echo 'For Example: Type "1" if the desired output for your Chromecast Audio device is on sink #1'
     pactl list short sinks
     read SINKOUTPUT
+else
+    SINKOUTPUT=$1
 fi
 
 
