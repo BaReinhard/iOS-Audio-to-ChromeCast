@@ -5,7 +5,15 @@
         display: block;
         border-radius:14px;
 }
+.off{
+color:red;
+}
+.on{
+color:green;
+}
 .buttons{
+    background: url('../img/speaker.png') no-repeat;
+    background-size: 100%;
     height: 75px; width: 75px;
     border-radius:15px;
     margin: 0 auto

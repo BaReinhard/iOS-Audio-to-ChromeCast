@@ -20,27 +20,26 @@ app.use(morgan('dev'));                                         // log every req
 app.use(bodyParser());                                          // pull information from html in POST
 app.use(methodOverride());                                      // simulate DELETE and PUT
 app.get('app/sinks.json', function(req, res){
-        console.log(req);
-
+	res.status(200);
+	res.end();
 });
 app.get('/refreshSinks',function(req,res){
-
+	// Not Implemented Yet
         refreshSinks();
-
-        res.status(200)
+        res.status(200);
         res.end();
 });
 app.post('/changeVolume', function(req,res){
         volume = req.body.volume;
         exec("~/changeVolume.sh "+volume);
-        console.log(req.body.volume);
+	res.status(200);
+	res.end();
 });
 app.post('/moveSink',  function(req, res){
     // is called when /movesink is requested from any client
         moveSink(parseInt(req.body.sink));
-        //exec("/usr/locl/bin/changesink", parseInt(req.body.sink));
-        console.log(req.body.sink);
-    // ... call the function that executes the shell script from your node app
+	res.status(200);
+	res.end();
 });
 app.listen(2221);
 console.log('Simple static server listening on port 2221');

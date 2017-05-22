@@ -1,8 +1,8 @@
 [
 { "sink" : "0",
-"name" : "alsa_output.usb-C-Media_Electronics_Inc._USB_Audio_Device-00.analog-stereo",
-"volume" : "46",
-"value" : "46",
+"name" : "alsa_output.platform-soc_sound.analog-stereo",
+"volume" : "100",
+"value" : "100",
 "options" : {
 "id" : "0",
 "floor" : "0",
@@ -10,9 +10,9 @@
 "onChange" : "function(id, value){updateVol(id,value);}"}
 },
 { "sink" : "1",
-"name" : "alsa_output.platform-soc_sound.analog-stereo",
-"volume" : "55",
-"value" : "55",
+"name" : "alsa_output.0.analog-stereo",
+"volume" : "40",
+"value" : "40",
 "options" : {
 "id" : "1",
 "floor" : "0",
@@ -20,9 +20,9 @@
 "onChange" : "function(id, value){updateVol(id,value);}"}
 },
 { "sink" : "2",
-"name" : "alsa_output.0.analog-stereo",
-"volume" : "2",
-"value" : "2",
+"name" : "homegroup_chromecast",
+"volume" : "52",
+"value" : "52",
 "options" : {
 "id" : "2",
 "floor" : "0",
@@ -31,8 +31,8 @@
 },
 { "sink" : "3",
 "name" : "bkklivingroom_chromecast",
-"volume" : "66",
-"value" : "66",
+"volume" : "100",
+"value" : "100",
 "options" : {
 "id" : "3",
 "floor" : "0",
@@ -40,9 +40,9 @@
 "onChange" : "function(id, value){updateVol(id,value);}"}
 },
 { "sink" : "4",
-"name" : "homegroup_chromecast",
-"volume" : "0",
-"value" : "0",
+"name" : "kamilasroom_chromecast",
+"volume" : "100",
+"value" : "100",
 "options" : {
 "id" : "4",
 "floor" : "0",
