@@ -12,7 +12,6 @@ color:red;
 color:green;
 }
 .buttons{
-    background: url('../img/speaker.png') no-repeat;
     background-size: 100%;
     height: 75px; width: 75px;
     border-radius:15px;
