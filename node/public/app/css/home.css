@@ -11,6 +11,22 @@ color:red;
 .on{
 color:green;
 }
+.title{
+  color:white;
+}
+.title,.refresh,.sink-name{
+
+  font-family: 'Lobster', cursive;
+}
+.container{
+  margin-top:39px;
+}
+#hc_extension_bkgnd{
+  background-color: black!important;
+}
+html{
+  background-color:black;
+}
 .buttons{
     background-size: 100%;
     height: 75px; width: 75px;
@@ -18,32 +34,51 @@ color:green;
     margin: 0 auto
 }
 .imagecontainer{
-        width:30%;
+        width:33%;
         float:left;
         opacity:.65;
 }
+.btn-primary{
+  background-color:rgba(0,0,0,.5) !important;
+}
+.rz-bubble{
+  color:white!important;
+
+  font-family: 'Lobster', cursive;
+}
+.vol-title{
+  text-align:center;
+  font-size:4vw;
+  font-weight:bold;
+  color:white;
+  font-family: 'Lobster', cursive;
+}
 .imagecontainer p {
+  color:white;
         float:none;
         font-family: Tahoma;
-#       margin:1.66%;
+        margin:1.66%;
         line-height:5vw;
-        font-size:2vw !important;
+        font-size:3vw !important;
         font-weight: 800;
         text-transform: uppercase;
         border-bottom: 2px solid #f1f1f1;
         width:90%;
-#       padding-bottom: 20px;
+        padding-bottom: 20px;
+}
+.jumbotron{
+  background-color:black!important;
+}
+.html{
+  height:100%;
+  background-color: black;
 }
 
 .rz-container{
-        width:95%;
-        margin: 5vw auto 0 auto;
-        background: linear-gradient(#fff,#6499ef,#fff);
-        border-radius:3vw;
+        width:100%;
+        background-color: rgba(0,0,0,.5);
         padding: 5vw 2vw 2vw 2vw;
-        border: solid #54aacc;
         height:100%;
-        opacity: .8;
 }
 .rz-header p{
 opacity:1;
@@ -60,40 +95,38 @@ font-size:3vw;
 }
 
 .jumbotron.text-center.ng-scope{
-        background: linear-gradient(#ffffff,#6499ef,#ffffff);
 }
 
 .sink-name{
         font-family: Tahoma;
 }
-@media (min-width:320px)  { 
- 
-	
-	}/* smartphones, iPhone, portrait 480x320 phones */ 
+@media (min-width:320px)  {
+
+
+	}/* smartphones, iPhone, portrait 480x320 phones */
 
 @media (min-width:481px)  {
 
-	
-	} 
+
+	}
 @media (max-width:481px)  {
-	
-	
-	}/* portrait e-readers (Nook/Kindle), smaller tablets @ 600 or @ 640 wide. */ 
-@media (min-width:641px)  { 
-	
-	
-	}/* portrait tablets, portrait iPad, landscape e-readers, landscape 800x480 or 854x480 phones */ 
-@media (min-width:961px)  { 
-	
-	}/* tablet, landscape iPad, lo-res laptops ands desktops */ 
-@media (min-width:1025px) { 
-	
-	}/* big landscape tablets, laptops, and desktops */ 
-@media (min-width:1281px) { 
+
+
+	}/* portrait e-readers (Nook/Kindle), smaller tablets @ 600 or @ 640 wide. */
+@media (min-width:641px)  {
+
+
+	}/* portrait tablets, portrait iPad, landscape e-readers, landscape 800x480 or 854x480 phones */
+@media (min-width:961px)  {
+
+	}/* tablet, landscape iPad, lo-res laptops ands desktops */
+@media (min-width:1025px) {
+
+	}/* big landscape tablets, laptops, and desktops */
+@media (min-width:1281px) {
 
 	.buttons{
         height: 250px;
         width: 250px;
 	}
-	}/* hi-res laptops and desktops */ 
-
+	}/* hi-res laptops and desktops */

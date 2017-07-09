@@ -1,13 +1,25 @@
 {
-  "name": "starter-node-angular",
+  "name": "multiroom-audio-ios",
+  "version": "1.0.0",
+  "description": "Web Application to Control PulseAudio Sink Volumes and Outputs",
   "main": "server.js",
-  "dependencies": {
-    "express": "~4.0.0",
-    "morgan": "~1.0.0",
-    "body-parser": "~1.0.0",
-    "method-override": "~1.0.0"
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
   },
-  "devDependencies": {
-    "morgan": "^1.0.1"
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bareinhard/multiroom-audio-ios.git"
+  },
+  "author": "Brett Reinhard",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/bareinhard/multiroom-audio-ios/issues"
+  },
+  "homepage": "https://github.com/bareinhard/multiroom-audio-ios#readme",
+  "dependencies": {
+    "body-parser": "^1.17.2",
+    "method-override": "^2.3.9",
+    "morgan": "^1.8.2"
   }
 }

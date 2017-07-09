@@ -1,12 +1,13 @@
 <div class="rz-header">
-    <p style="text-align:center;font-size:3vw;font-weight:bold">Volume<p>
+    <p class="vol-title">Volume<p>
 </div>
 <div class="rz-container">
     <rzslider id="rz1" rz-slider-model="val" rz-slider-options="{floor:0,ceil:100,onEnd:sliderEnd}"></rzslider>
 </div>
 
 <div class="jumbotron text-center" >
-        <h2> MultiRoom Controller</h2>
+        <h2 class='title'> MultiRoom Controller</h2>
+        <div class="btn btn-primary refresh" ng-click="refreshSinks()">Refresh Sinks</div>
         <div class="container" >
 
                                         <div class="repeatContainer">
@@ -16,6 +17,3 @@
 
         </div>
 </div>
-
-
-

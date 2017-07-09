@@ -2,7 +2,7 @@ multiRoomApp.controller('HomeController',['$scope','buttonService', '$http' ,'$t
     $scope.getButtons = function () {
         buttonService.get().then(function (buttons) {
             $scope.buttons = buttons.data;
-            $scope.val = parseInt($scope.buttons[0].volume);            
+            $scope.val = parseInt($scope.buttons[0].volume);
         });
     }
     // Get Buttons/Sinks
@@ -36,5 +36,6 @@ multiRoomApp.controller('HomeController',['$scope','buttonService', '$http' ,'$t
 	}
 
     }
+
 
 }]);
