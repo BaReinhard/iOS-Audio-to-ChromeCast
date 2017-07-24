@@ -37,4 +37,4 @@ sudo ./install.sh
 
 
 ![Web UI Controls](https://raw.githubusercontent.com/BaReinhard/Multiroom-Audio-iOS/master/node/public/app/img/multiroomaudio.png)
-Thats it! Enjoy.
+Thats it! Enjoy...
