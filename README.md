@@ -1,6 +1,9 @@
 # Multiroom-Audio-iOS
 Audio Streaming from iOS devices to Google Chromecast Audio Devices.
 
+# Searching for Dev Help!
+* If you have an interest in making this project better, feel free to fork it and make revisions as you see fit. I will gladly merge new features given there are no breaking changes.
+
 ## What's needed?
 * Raspberry Pi Running Ubuntu MATE
 * 2+ Chromecast Audio's, will work with one but then its not really multiroom audio
