@@ -18,4 +18,7 @@ sed -i '$i \pulseaudio-dlna&\n' /etc/rc.local
 
 mv ~/.config/pulse ~/.config/pulse.bad
 
+echo "autospawn = no" >> /etc/pulse/client.conf
+echo "daemon-binary = false" >> /etc/pulse/client.conf
+
 exit 0
