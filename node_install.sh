@@ -16,13 +16,12 @@ apt-get install nodejs -y
 # Install Node Package Manager
 apt-get install npm -y
 
-# Add nodejs startup command to .profile
-echo "nodejs /home/${user}/projects/node/server.js" >> "/home/${user}/.profile"
 
 # Move Necessary files to home directory
-cp JSONFormatting/* "/home/${user}/"
+cp JSONFormatting/* "/usr/local/bin"
 
 # Make files executable
+chmod +x /usr/local/bin/*
 chmod +x "/home/${user}/"*
 
 # Make projects folder
