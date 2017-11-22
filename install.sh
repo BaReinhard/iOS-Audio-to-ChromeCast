@@ -42,6 +42,8 @@ echo " ====================== Installing Shairport-Sync ====================="
 echo " ======================================================================"
 echo " ====================== Installing Node JS ============================"
 excmd ./node_install.sh | tee -a $log
+echo " ====================== Moving Helper Files ============================"
+cp ./home/* /usr/local/bin/
 echo " ======================= END =========================================="
 
 echo "If you would like to request some other functionality, have suggestions, or found something doesn't work quite right."
