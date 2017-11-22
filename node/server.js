@@ -10,11 +10,11 @@ function moveSink(index){
   exec("/usr/local/bin/changesink "+index);
 }
 function changeVolume(volume){
-  exec("~/changeVolume.sh "+volume);
+  exec("/usr/local/bin/changeVolume.sh "+volume);
 }
 function refreshSinks(){
 
-        exec('~/executeJson.sh');
+        exec('/usr/local/bin/executeJson.sh');
 }
 refreshSinks();
 app.use(express.static(__dirname + '/public'));         // set the static files location /public/img will be /img for users
@@ -26,6 +26,7 @@ app.get('/refreshSinks',function(req,res){
 	// Not Implemented Yet
   refreshSinks();
   res.status(200);
+	// Need to add reading of .json file to update sinks
   res.end();
 });
 app.post('/changeVolume', function(req,res){
