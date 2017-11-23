@@ -1,12 +1,1 @@
-multiRoomApp.controller('AboutController',['$scope',function($scope){
-
-
-
-}]);
-
-
-
-
-
-
-
+multiRoomApp.controller('AboutController', ['$scope', function($scope) {}]);
