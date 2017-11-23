@@ -1,8 +1,8 @@
 [
 { "sink" : "0",
-"name" : "alsa_output.platform-soc_sound.analog-stereo",
-"volume" : "100",
-"value" : "100",
+"name" : "alsa_output.0.analog-stereo",
+"volume" : "40",
+"value" : "40",
 "options" : {
 "id" : "0",
 "floor" : "0",
@@ -10,9 +10,9 @@
 "onChange" : "function(id, value){updateVol(id,value);}"}
 },
 { "sink" : "1",
-"name" : "alsa_output.0.analog-stereo",
-"volume" : "40",
-"value" : "40",
+"name" : "bkklivingroom_chromecast",
+"volume" : "100",
+"value" : "100",
 "options" : {
 "id" : "1",
 "floor" : "0",
@@ -21,30 +21,10 @@
 },
 { "sink" : "2",
 "name" : "homegroup_chromecast",
-"volume" : "52",
-"value" : "52",
+"volume" : "100",
+"value" : "100",
 "options" : {
 "id" : "2",
-"floor" : "0",
-"ceil" : "100",
-"onChange" : "function(id, value){updateVol(id,value);}"}
-},
-{ "sink" : "3",
-"name" : "bkklivingroom_chromecast",
-"volume" : "100",
-"value" : "100",
-"options" : {
-"id" : "3",
-"floor" : "0",
-"ceil" : "100",
-"onChange" : "function(id, value){updateVol(id,value);}"}
-},
-{ "sink" : "4",
-"name" : "kamilasroom_chromecast",
-"volume" : "100",
-"value" : "100",
-"options" : {
-"id" : "4",
 "floor" : "0",
 "ceil" : "100",
 "onChange" : "function(id, value){updateVol(id,value);}"}
