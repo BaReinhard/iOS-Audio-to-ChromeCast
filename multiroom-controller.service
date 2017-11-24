@@ -1,0 +1,13 @@
+[Unit]
+Description=Starts Node Server for Multiroom Controller
+After=sound.target network.target
+
+[Service]
+Type=simple
+User=brett
+WorkingDirectory=/usr/local/bin
+ExecStart=/usr/local/bin/start_web_ui
+Restart=on-abort
+
+[Install]
+WantedBy=multi-user.target
