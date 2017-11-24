@@ -75,8 +75,8 @@ fi
 
 # Enable Web UI at startup
 chmod +x /usr/local/bin/*
-chmod +x /home/{user}/*
-chmod 777 -R /home/{user}/projects
+chmod +x /home/${user}/*
+chmod 777 -R /home/${user}/projects
 
 # Prompts the user to Reboot, gives the option in case the script failed inside an important step in a sub file
 REBOOT="REBOOT"
