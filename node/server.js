@@ -24,7 +24,7 @@ function os_func() {
         });
     };
 }
-
+exec('/usr/local/bin/executeJson.sh');
 app.use(express.static(__dirname + '/public')); // set the static files location /public/img will be /img for users
 // Uncomment to Debug
 app.use(morgan('dev')); // log every request to the console
