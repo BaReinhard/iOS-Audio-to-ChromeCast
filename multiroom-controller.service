@@ -1,13 +1,17 @@
-[Unit]
-Description=Starts Node Server for Multiroom Controller
-After=sound.target network.target
+Description=Multiroom Audio Controller
 
 [Service]
-Type=simple
+ExecStart=/bin/bash /usr/local/bin/start_web_ui
+# Required on some systems
+#WorkingDirectory=/opt/nodeserver
+Type=forking
+Restart=always
+ # Restart service after 10 seconds if node service crashes
+ RestartSec=10
+ # Output to syslog
+StandardOutput=syslog
+StandardError=syslog
+SyslogIdentifier=multiroom-controller
 User=brett
-WorkingDirectory=/usr/local/bin
-ExecStart=/usr/local/bin/start_web_ui
-Restart=on-abort
-
-[Install]
-WantedBy=multi-user.target
+#Group=<alternate group>
+Environment=NODE_ENV=production PORT=2221
