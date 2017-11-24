@@ -46,7 +46,7 @@ echo " ====================== Moving Helper Files ============================"
 cp ./home/* /usr/local/bin/
 cp ./pa_fix.sh /usr/local/bin/pa_fix.sh
 chmod +x /usr/local/bin/pa_fix.sh
-echo "/usr/local/bin/pa_fix.sh" >> "/home/${user}/.profile
+echo "/usr/local/bin/pa_fix.sh" >> "/home/${user}/.profile"
 echo " ======================= END =========================================="
 
 echo "If you would like to request some other functionality, have suggestions, or found something doesn't work quite right."
