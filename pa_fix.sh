@@ -6,4 +6,4 @@ export XAUTHORITY=/home/$user/.Xauthority
 export DISPLAY=':0'
 pulseaudio -nF /etc/pulse/default.pa&
 ## Uncomment to have pulseaudio-dlna start correctly
-# pulseaudio-dlna&
+pulseaudio-dlna&
