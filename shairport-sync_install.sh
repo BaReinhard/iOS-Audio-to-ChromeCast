@@ -38,8 +38,6 @@ excmd cp usr/local/bin/setdefaultsink /usr/local/bin/setdefaultsink
 # Made  setdefaultsink executable
 excmd chmod +x /usr/local/bin/setdefaultsink
 
-# Inserts a line to /etc/rc.local to allow shairport-sync to execute as a non root user
-echo "shairport-sync -o alsa -c pulse -c /etc/shairport-sync.conf&" >> "/home/${UserName}/.profile"
 
 # Inserts the Chosen AirPlay name into shairport-sync.conf at line 7
 sed -i "7i \name = \"${AirPlay}\";" /etc/shairport-sync.conf
