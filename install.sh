@@ -43,6 +43,8 @@ echo " ======================================================================"
 echo " ====================== Installing Node JS ============================"
 excmd ./node_install.sh | tee -a $log
 echo " ====================== Moving Helper Files ============================"
+cp ./multiroom-controller.service /etc/systemd/system/
+sed -i "s/User.*/User=${user}/" /etc/systemd/system/multiroom-controller.service 
 cp ./home/* /usr/local/bin/
 cp ./pa_fix.sh /usr/local/bin/pa_fix.sh
 chmod +x /usr/local/bin/pa_fix.sh
@@ -64,15 +66,17 @@ do
 done
 
 if [ $NODE = "y" ]; then
-  echo "start_web_ui" >> "/home/${user}/.profile"
-  echo "The Web UI will now be start every time ${user} logs in"
+  systemctl enable multiroom-controller.service
+  echo "The Web UI will now be started as a service, to disable type sudo systemctl disable multiroom-controller.service"
 else
   echo "Web UI, will need to be started manually after each reboot, if you every change your mind please run the following command:"
-  echo "enable_web_startup"
+  echo "enable_web_startup, or to make a permanent change, enable the service via, sudo systemctl enable multiroom-controller.service"
 fi
 
 # Enable Web UI at startup
-chmod +x /usr/local/bin/enable_web_startup
+chmod +x /usr/local/bin/*
+chmod +x /home/{user}/*
+chmod 777 -R /home/{user}/projects
 
 # Prompts the user to Reboot, gives the option in case the script failed inside an important step in a sub file
 REBOOT="REBOOT"
