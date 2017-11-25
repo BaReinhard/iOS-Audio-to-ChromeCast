@@ -1,10 +1,10 @@
 # iOS-Audio-to-ChromeCast
 Audio Streaming from iOS devices to Google Chromecast Audio Devices.
-
+## RUNS ON UBUNTU MATE, doesn't work on Raspbian.
 ## Mainly created for multiroom, but works with only 1 chromecast as well
 
 ## What's needed?
-* Raspberry Pi Running Ubuntu MATE
+* Raspberry Pi Running Ubuntu MATE(download [here](https://ubuntu-mate.org/download/))
 * 2+ Chromecast Audio's, will work with one but then its not really multiroom audio
 * Wifi Network
 * Speakers
