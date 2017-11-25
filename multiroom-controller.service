@@ -15,3 +15,6 @@ SyslogIdentifier=multiroom-controller
 User=brett
 #Group=<alternate group>
 Environment=NODE_ENV=production PORT=2221
+
+[Install]
+WantedBy=multi-user.target
