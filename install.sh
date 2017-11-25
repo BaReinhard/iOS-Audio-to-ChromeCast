@@ -52,7 +52,7 @@ echo "/usr/local/bin/pa_fix.sh" >> "/home/${user}/.profile"
 echo " ======================= END =========================================="
 
 echo "If you would like to request some other functionality, have suggestions, or found something doesn't work quite right."
-echo "Please open an issue at https://github.com/BaReinhard/iOS-Audio-to-ChromeCast-Multiroom/issues"
+echo "Please open an issue at https://github.com/BaReinhard/iOS-Audio-to-ChromeCast/issues"
 echo "Thank you, and enjoy your new Multiroom-Audio-iOS project."
 echo "Be sure to checkout the new Web UI by simply typing start_web_ui and visit your ip address on port 2221 i.e. 192.168.0.18:2221 in your web browser"
 echo "\n"
