@@ -19,28 +19,19 @@ This project will setup a Raspberry Pi running Ubuntu MATE as a "middle-man" bet
 
 ## Install
 
-First setup your chromecasts and create a multi device group via the app Google Home, then move on to the software
+First setup your chromecasts and create a multi device group via the app Google Home, then move on to the software : (Be sure to follow the prompts, it will ask you to name your device and then after completion will ask your to reboot (it is recommended that you do))
 
 ```
-git clone https://github.com/bareinhard/Multiroom-Audio-iOS
-cd Multiroom-Audio-iOS
+git clone https://github.com/bareinhard/iOS-Audio-to-ChromeCast-Multiroom
+cd iOS-Audio-to-ChromeCast-Multiroom
 sudo chmod +x ./install.sh
 sudo ./install.sh
 ```
 
-## Some Basic Usage
+## Usage
 
-### Changing Sinks
-* If you are trying to changesinks will need to run the command  `changesink {sink_number}` or use the Web UI, more information below.
-### The Commands
-* `changesink {sink_number}` - this is almost identical to `autostream`, but it does not loop and takes a parameter to change the current input sink to the passed variable as the output sink.
-### The WEB UI Commands
-* `start_web_ui` - this command will start `nodejs` with the proper `server.js` file location in `/home/user/projects/node`. You will be able to see the Web UI at your Pi's ip address on port 2221 inside your favorite web browser, i.e. 192.168.0.18:2221. The Web UI was made for use with chrome, some functionality may be missing in other browsers. For the time being, the volume control has not been setup properly and isn't working (this will be fixed shortly).
-* `stop_web_ui` - this command will kill the `nodejs` instance and the Web UI will not longer be visible in a web browser.
-* `restart_web_ui` - this command will kill the `nodejs` instance then restart `nodejs` in the same manner as `start_web_ui`, this command is essentially a combination of both `start_web_ui` and `stop_web_ui`. `restart_web_ui` is used mainly to refresh the sinks. This refreshing of sinks will be shortly available as a button inside the Web UI.
+Once you have completed the Install, simply open your browser and navigate to whatever ip address your Raspberry Pi is on, on Port 2221, i.e. 192.168.0.26:2221. From there you will be able to control which sink to play to. You will first need to connect to the Raspberry Pi from your iOS device via AirPlay, then you will be able to change the sinks via the Web Browser. To update the browsers you can simply refresh the page or click the 'refresh sinks' button.
 
 
-
-
-![Web UI Controls](https://raw.githubusercontent.com/BaReinhard/Multiroom-Audio-iOS/master/node/public/app/img/multiroomaudio.png)
+![Web UI Controls](https://raw.githubusercontent.com/BaReinhard/iOS-Audio-to-ChromeCast-Multiroom/master/node/public/app/img/multiroomaudio.png)
 Thats it! Enjoy...
