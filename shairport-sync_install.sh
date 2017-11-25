@@ -27,8 +27,6 @@ excmd chmod +x /usr/local/bin/shairport-start
 excmd cp usr/local/bin/changesink /usr/local/bin/changesink
 excmd chmod +x /usr/local/bin/changesink
 
-# Made the autostream handler executable
-excmd chmod +x /usr/local/bin/autostream
 
 # Copy the shell script that sets the default sink
 excmd cp usr/local/bin/setdefaultsink /usr/local/bin/setdefaultsink
