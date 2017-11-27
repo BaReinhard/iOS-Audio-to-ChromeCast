@@ -37,6 +37,9 @@ echo " ======================================================================"
 echo " ====================== Installing Pulseaudio-dlna ===================="
 excmd ./pa_dlna_install.sh | tee -a $log
 echo " ======================================================================"
+echo " ====================== Installing URL-Streaming ===================="
+excmd ./url_stream_install.sh | tee -a $log
+echo " ======================================================================"
 echo " ====================== Installing Shairport-Sync ====================="
 { echo "${user}"; echo "${AirPlayName}"; } | excmd ./shairport-sync_install.sh | tee -a $log
 echo " ======================================================================"
