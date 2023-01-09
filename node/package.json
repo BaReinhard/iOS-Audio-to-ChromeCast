@@ -19,7 +19,7 @@
   "homepage": "https://github.com/bareinhard/multiroom-audio-ios#readme",
   "dependencies": {
     "body-parser": "^1.17.2",
-    "method-override": "^2.3.9",
+    "method-override": "^3.0.0",
     "morgan": "^1.8.2"
   }
 }
